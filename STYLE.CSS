@@ -1,0 +1,637 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #1e1e2f;
+    color: #f5f5f7;
+    line-height: 1.6;
+    min-height: 100vh;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+}
+
+
+/* =========================================
+   2. HERO SECTION
+========================================= */
+
+.main-header {
+    width: 100%;
+    min-height: 330px;
+    display: flex;
+    align-items: center;
+    padding: 55px 2.5%;
+    background-color: #292c34;
+    color: #ffffff;
+}
+
+.intro-text {
+    width: 100%;
+    max-width: 1450px;
+    margin: 0 auto;
+}
+
+.intro-text h1 {
+    font-size: clamp(2rem, 3vw, 3rem);
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 24px;
+}
+
+#typing {
+    color: #ffd21f;
+    font-weight: 700;
+}
+
+#typing::after {
+    content: "|";
+    margin-left: 3px;
+    animation: blink 0.8s infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+.hero-subtitle {
+    font-size: clamp(1rem, 1.5vw, 1.4rem);
+    margin-bottom: 20px;
+    color: #f0f0f2;
+}
+
+
+/* =========================================
+   3. HERO BUTTONS
+========================================= */
+
+.cta-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 22px;
+    margin-top: 18px;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 303px;
+    min-height: 65px;
+    padding: 15px 28px;
+    background-color: #62d3e7;
+    color: #151a2b;
+    border-radius: 15px;
+    font-size: 1.15rem;
+    font-weight: 700;
+    text-align: center;
+    transition: 0.25s ease;
+}
+
+.btn:hover {
+    background-color: #39c5df;
+    transform: translateY(-3px);
+    box-shadow: 0 7px 20px rgba(0, 0, 0, 0.18);
+}
+
+.btn-secondary {
+    background-color: #333333;
+    color: #ffffff;
+}
+
+.btn-secondary:hover {
+    background-color: #454545;
+}
+
+
+/* =========================================
+   4. NAVIGATION BAR
+========================================= */
+
+.nav-bar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 28px;
+    min-height: 74px;
+    padding: 15px 20px;
+    background-color: #111111;
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.nav-bar a {
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: 700;
+    transition: color 0.25s ease;
+}
+
+.nav-bar a:hover {
+    color: #62d3e7;
+}
+
+#toggleMode {
+    border: none;
+    background: transparent;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 5px 8px;
+    transition: color 0.25s ease;
+}
+
+#toggleMode:hover {
+    color: #62d3e7;
+}
+
+
+/* =========================================
+   5. MAIN CONTENT SECTIONS
+========================================= */
+
+main {
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 24px 2.5% 0;
+}
+
+.content-section {
+    width: 100%;
+    margin: 0 auto 24px;
+    padding: 65px 40px 48px;
+    background-color: #2a2a3c;
+    color: #f5f5f7;
+    border-radius: 24px;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.14);
+    scroll-margin-top: 95px;
+}
+
+.content-section h2 {
+    font-size: 2.15rem;
+    font-weight: 700;
+    margin-bottom: 24px;
+    padding: 0;
+    color: #ffffff;
+    border: none;
+    line-height: 1.3;
+}
+
+
+/* =========================================
+   6. EDUCATION CARDS
+========================================= */
+
+.education-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 22px;
+}
+
+.education-card {
+    position: relative;
+    padding: 46px 24px 30px;
+    background-color: #39394f;
+    color: #f5f5f7;
+    border-radius: 24px;
+    box-shadow: 0 4px 9px rgba(0, 0, 0, 0.12);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.education-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+}
+
+.education-card h3 {
+    font-size: 1.55rem;
+    color: #ffffff;
+    margin-bottom: 22px;
+    padding-right: 65px;
+}
+
+.education-card p {
+    font-size: 1.15rem;
+    margin-bottom: 14px;
+    overflow-wrap: anywhere;
+}
+
+.education-card p:last-child {
+    margin-bottom: 0;
+}
+
+.education-card strong {
+    color: #ffffff;
+}
+
+.education-icon {
+    position: absolute;
+    top: 22px;
+    right: 26px;
+    font-size: 2.5rem;
+    line-height: 1;
+}
+
+
+/* =========================================
+   7. SKILLS GRID
+========================================= */
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.skill-box {
+    min-height: 194px;
+    padding: 48px 24px 30px;
+    background-color: #39394f;
+    color: #ffffff;
+    border-radius: 24px;
+    box-shadow: 0 4px 9px rgba(0, 0, 0, 0.12);
+    transition: transform 0.25s ease, background-color 0.25s ease;
+}
+
+.skill-box:hover {
+    transform: translateY(-5px);
+    background-color: #414158;
+}
+
+.skill-box h3 {
+    font-size: 1.3rem;
+    margin-bottom: 25px;
+    color: #ffffff;
+}
+
+.skill-box p {
+    font-size: 1.15rem;
+    color: #f1f1f5;
+    overflow-wrap: anywhere;
+}
+
+
+/* =========================================
+   8. PROJECTS GRID
+========================================= */
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 36px 0;
+    padding: 0;
+}
+
+.project-card {
+    min-height: 240px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 32px 30px;
+    background-color: #39394f;
+    color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.16);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    position: relative;
+}
+
+.project-card:hover {
+    z-index: 1;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.24);
+}
+
+.project-card h3 {
+    color: #ffffff;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    overflow-wrap: anywhere;
+}
+
+.view-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 59px;
+    padding: 12px 30px;
+    background-color: #62d3e7;
+    color: #151a2b;
+    border-radius: 13px;
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-align: center;
+    transition: 0.25s ease;
+}
+
+.view-btn:hover {
+    background-color: #39c5df;
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   9. INTERESTS
+========================================= */
+
+#interests p {
+    font-size: 1.2rem;
+    line-height: 1.55;
+    color: #f0f0f5;
+}
+
+
+/* =========================================
+   10. FOOTER
+========================================= */
+
+footer {
+    width: 100%;
+    padding: 38px 20px 42px;
+    text-align: center;
+    color: #a8a8b7;
+    font-size: 1.2rem;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer a {
+    color: #62d3e7;
+    overflow-wrap: anywhere;
+    transition: color 0.25s ease;
+}
+
+footer a:hover {
+    color: #9aeafa;
+    text-decoration: underline;
+}
+
+
+/* =========================================
+   11. LIGHT MODE
+========================================= */
+
+body.light-mode {
+    background-color: #f0f2f7;
+    color: #252538;
+}
+
+body.light-mode .main-header {
+    background-color: #e2e7f0;
+    color: #252538;
+}
+
+body.light-mode .hero-subtitle {
+    color: #353548;
+}
+
+body.light-mode .content-section {
+    background-color: #ffffff;
+    color: #252538;
+}
+
+body.light-mode .content-section h2,
+body.light-mode .education-card h3,
+body.light-mode .skill-box h3,
+body.light-mode .project-card h3 {
+    color: #252538;
+}
+
+body.light-mode .education-card,
+body.light-mode .skill-box,
+body.light-mode .project-card {
+    background-color: #f0f2f8;
+    color: #252538;
+}
+
+body.light-mode .education-card p,
+body.light-mode .skill-box p,
+body.light-mode #interests p {
+    color: #44445a;
+}
+
+body.light-mode .education-card strong {
+    color: #252538;
+}
+
+body.light-mode footer {
+    color: #55556b;
+}
+
+body.light-mode .nav-bar {
+    background-color: #ffffff;
+    color: #252538;
+}
+
+body.light-mode .nav-bar a,
+body.light-mode #toggleMode {
+    color: #252538;
+}
+
+body.light-mode .nav-bar a:hover,
+body.light-mode #toggleMode:hover {
+    color: #009dbb;
+}
+
+
+/* =========================================
+   12. TABLET RESPONSIVENESS
+========================================= */
+
+@media (max-width: 1000px) {
+    main {
+        padding-left: 22px;
+        padding-right: 22px;
+    }
+
+    .content-section {
+        padding: 42px 28px;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .projects-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 22px;
+    }
+
+    .btn {
+        min-width: 250px;
+    }
+}
+
+
+/* =========================================
+   13. MOBILE RESPONSIVENESS
+========================================= */
+
+@media (max-width: 600px) {
+    html {
+        scroll-padding-top: 130px;
+    }
+
+    .main-header {
+        min-height: auto;
+        padding: 45px 22px;
+    }
+
+    .intro-text h1 {
+        font-size: 2rem;
+        margin-bottom: 18px;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .btn {
+        width: 100%;
+        min-width: 0;
+        min-height: 55px;
+        font-size: 1rem;
+    }
+
+    .nav-bar {
+        gap: 12px 18px;
+        padding: 15px 12px;
+    }
+
+    .nav-bar a {
+        font-size: 0.95rem;
+    }
+
+    #toggleMode {
+        font-size: 0.9rem;
+    }
+
+    main {
+        padding: 18px 14px 0;
+    }
+
+    .content-section {
+        padding: 30px 18px;
+        margin-bottom: 18px;
+        border-radius: 19px;
+    }
+
+    .content-section h2 {
+        font-size: 1.75rem;
+        margin-bottom: 20px;
+    }
+
+    .education-card {
+        padding: 35px 18px 24px;
+        border-radius: 18px;
+    }
+
+    .education-card h3 {
+        font-size: 1.25rem;
+        margin-bottom: 17px;
+        padding-right: 45px;
+    }
+
+    .education-card p {
+        font-size: 1rem;
+    }
+
+    .education-icon {
+        top: 20px;
+        right: 18px;
+        font-size: 1.8rem;
+    }
+
+    .skills-grid,
+    .projects-container {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .skill-box {
+        min-height: auto;
+        padding: 28px 20px;
+        border-radius: 18px;
+    }
+
+    .skill-box h3 {
+        font-size: 1.15rem;
+        margin-bottom: 12px;
+    }
+
+    .skill-box p {
+        font-size: 1rem;
+    }
+
+    .project-card {
+        min-height: 190px;
+        padding: 28px 22px;
+        border-radius: 18px;
+    }
+
+    .project-card h3 {
+        font-size: 1.5rem;
+    }
+
+    .view-btn {
+        min-height: 50px;
+        font-size: 1.05rem;
+    }
+
+    #interests p {
+        font-size: 1rem;
+    }
+
+    footer {
+        padding: 25px 16px 32px;
+        font-size: 0.95rem;
+    }
+}
+
+
+/* =========================================
+   14. REDUCED MOTION ACCESSIBILITY
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
