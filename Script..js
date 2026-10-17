@@ -3,7 +3,7 @@ const typingElement = document.getElementById("typing");
 const words = [
     "a Web Developer",
     "a Tech Enthusiast",
-    "an Electrnic"
+    "an Electronic and Communication Engineering with Artificial Intelligence",
 ];
 
 let wordIndex = 0;
